@@ -30,6 +30,8 @@ import { Component } from '@angular/core';
   `,
 })
 export class BotaoFlatComponent {
+  counter = 0;
+
   limpar() {
     console.log('Limpar filtro');
   }
