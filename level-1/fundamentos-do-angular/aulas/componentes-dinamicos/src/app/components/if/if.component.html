@@ -1,0 +1,22 @@
+<h2>Conteudo por Papel</h2>
+
+@if (userRole === 'admin'; as result) {
+<div>
+  <p>Você é um administrador</p>
+  <p>{{ result }}</p>
+</div>
+} @else if (userRole === 'editor') {
+<div>
+  <p>Você é um editor</p>
+</div>
+} @else {
+<div>
+  <p>Você é um visitante</p>
+</div>
+}
+
+<br />
+
+<button (click)="setUserRole('admin')">Mudar papel para admin</button>
+<button (click)="setUserRole('editor')">Mudar papel para editor</button>
+<button (click)="setUserRole('visitor')">Mudar papel para visitante</button>

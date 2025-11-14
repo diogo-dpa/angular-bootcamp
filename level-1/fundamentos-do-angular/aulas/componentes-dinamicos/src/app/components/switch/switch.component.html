@@ -1,0 +1,13 @@
+<h2>Conteudo por Papel</h2>
+
+@switch (userRole) { @case ('admin') {
+<p>Você é um administrador</p>
+} @case ('editor') {
+<p>Você é um editor</p>
+} @default {
+<p>Você é um visitante</p>
+} }
+
+<button (click)="setUserRole('admin')">Mudar papel para admin</button>
+<button (click)="setUserRole('editor')">Mudar papel para editor</button>
+<button (click)="setUserRole('visitor')">Mudar papel para visitante</button>
