@@ -1,0 +1,11 @@
+<div>
+  <strong>Nome: {{ pessoa.nome }}</strong>
+  <p>Idade: {{ pessoa.idade }}</p>
+
+  @let endereco = pessoa.endereco ? `${pessoa.endereco.rua},
+  ${pessoa.endereco.numero}` : 'Não tem endereço';
+
+  <p>Endereço: {{ endereco }}</p>
+
+  <button (click)="removerPessoa(pessoa.id)">Remover Pessoa</button>
+</div>

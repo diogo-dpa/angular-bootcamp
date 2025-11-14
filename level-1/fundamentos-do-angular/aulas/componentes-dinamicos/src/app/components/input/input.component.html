@@ -1,0 +1,14 @@
+@let quantidadeItens = pegarQuantidadePessoas();
+<br />
+
+@if(quantidadeItens) {
+<br />
+@for (pessoa of pessoas; track pessoa.id) {
+<app-pessoa [teste]="pessoa" (removerPessoaEmit)="removerPessoa($event)" />
+<br />
+
+} } @else {
+<h1>Não existem itens</h1>
+}
+
+<button (click)="removerItem()">Remover Item</button>
