@@ -22,11 +22,11 @@ export class InputComponent {
       idade: 20,
       endereco: { rua: 'Rua das Flores', numero: 123 },
     },
-    {
-      id: 2,
-      nome: 'Maria',
-      idade: 25,
-    },
+    // {
+    //   id: 2,
+    //   nome: 'Maria',
+    //   idade: 25,
+    // },
   ];
 
   pegarQuantidadePessoas() {
@@ -39,5 +39,13 @@ export class InputComponent {
 
   removerPessoa(id: number) {
     this.pessoas = this.pessoas.filter((pessoa) => pessoa.id !== id);
+  }
+
+  mudarNome() {
+    // In order to trigger the ngOnChanges, it needs to pass a new object reference, otherwise the component will not be updated.
+    this.pessoas[0] = {
+      ...this.pessoas[0],
+      nome: 'João da Silva',
+    };
   }
 }
