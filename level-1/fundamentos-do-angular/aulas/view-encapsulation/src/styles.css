@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Configurações globais do projeto. Define configurações na tag <html> */
+:root {
+  --primary-color: orange;
+  --secondary-color: gray;
+}
+
 p {
   color: blue;
 }
