@@ -1,0 +1,12 @@
+@for (product of _productsService.products; track product.id) {
+<div>
+  <p>{{ product.id }}</p>
+  <p>{{ product.name }}</p>
+  <p>{{ product.price }}</p>
+</div>
+}
+
+<button (click)="criarProduto()">Criar produto</button>
+
+<button (click)="removerProduto()">Remover produto</button>
+<button (click)="modificarLista()">Modificar lista</button>
