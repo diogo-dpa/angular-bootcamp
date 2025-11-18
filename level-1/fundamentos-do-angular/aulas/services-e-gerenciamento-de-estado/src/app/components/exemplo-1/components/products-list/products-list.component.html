@@ -1,4 +1,4 @@
-@for (product of _productsService.products; track product.id) {
+@for (product of (_productsService.products$ | async); track product.id) {
 <div>
   <p>{{ product.id }}</p>
   <p>{{ product.name }}</p>

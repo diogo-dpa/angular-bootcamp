@@ -1,3 +1,5 @@
 <div>
-  <p>Quantidade de produtos: {{ _productsService.products.length }}</p>
+  <p>
+    Quantidade de produtos: {{ (_productsService.products$ | async)?.length }}
+  </p>
 </div>

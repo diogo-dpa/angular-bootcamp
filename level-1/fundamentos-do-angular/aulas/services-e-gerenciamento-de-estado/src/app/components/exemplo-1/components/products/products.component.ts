@@ -10,7 +10,15 @@ import { ProductsCounterComponent } from '../products-counter/products-counter.c
   styleUrl: './products.component.css',
 })
 export class ProductsComponent {
+  productsList: any[] = [];
   readonly _productsService = inject(ProductsService);
+
+  ngOnInit() {
+    this._productsService.products$.subscribe((products) => {
+      console.log(products);
+      this.productsList = products;
+    });
+  }
 
   criarProduto() {
     this._productsService.addProduct(3, 'Product 3', 300);
@@ -22,6 +30,6 @@ export class ProductsComponent {
 
   modificarLista() {
     // Errado
-    this._productsService.products = [];
+    this.productsList = [];
   }
 }
