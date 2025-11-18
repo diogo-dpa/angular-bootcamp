@@ -1,9 +1,11 @@
 import { Component, inject } from '@angular/core';
-import { ProductsService } from '../services/products.service';
+import { ProductsService } from '../../services/products.service';
+import { ProductsListComponent } from '../products-list/products-list.component';
+import { ProductsCounterComponent } from '../products-counter/products-counter.component';
 
 @Component({
   selector: 'app-products',
-  imports: [],
+  imports: [ProductsListComponent, ProductsCounterComponent],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
 })
